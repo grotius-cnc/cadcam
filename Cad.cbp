@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Cad" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Cad" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option use_console_runner="0" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="./" />
+					<Add directory="core/" />
+					<Add directory="interface/" />
+					<Add directory="dxf/" />
+					<Add directory="dxf" />
+					<Add directory="debug/" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Cad" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Option projectLinkerOptionsRelation="2" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="./" />
+					<Add directory="core/" />
+					<Add directory="interface/" />
+					<Add directory="dxf/" />
+					<Add directory="dxf" />
+					<Add directory="debug/" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="`wx-config --cflags --libs --gl-libs --libs all`" />
+		</Compiler>
+		<Linker>
+			<Add option="`wx-config --cxxflags --libs --gl-libs --libs all`" />
+			<Add library="GL" />
+			<Add library="GLU" />
+		</Linker>
+		<Unit filename="CadApp.cpp" />
+		<Unit filename="CadApp.h" />
+		<Unit filename="CadMain.cpp" />
+		<Unit filename="CadMain.h" />
+		<Unit filename="core/variable.cpp" />
+		<Unit filename="core/variable.h" />
+		<Unit filename="debug/debug_cad_array.cpp" />
+		<Unit filename="debug/debug_cad_array.h" />
+		<Unit filename="dxf/read_arc_AC1027.cpp" />
+		<Unit filename="dxf/read_arc_AC1027.h" />
+		<Unit filename="dxf/read_circle_AC1027.cpp" />
+		<Unit filename="dxf/read_circle_AC1027.h" />
+		<Unit filename="dxf/read_dxf.cpp" />
+		<Unit filename="dxf/read_dxf.h" />
+		<Unit filename="dxf/read_ellipse_AC1027.cpp" />
+		<Unit filename="dxf/read_ellipse_AC1027.h" />
+		<Unit filename="dxf/read_line_AC1027.cpp" />
+		<Unit filename="dxf/read_line_AC1027.h" />
+		<Unit filename="dxf/read_lwpolyline_AC1027.cpp" />
+		<Unit filename="dxf/read_lwpolyline_AC1027.h" />
+		<Unit filename="dxf/read_spline_AC1027.cpp" />
+		<Unit filename="dxf/read_spline_AC1027.h" />
+		<Unit filename="dxf/to_rgba.cpp" />
+		<Unit filename="dxf/to_rgba.h" />
+		<Unit filename="opengl.cpp" />
+		<Unit filename="opengl.h" />
+		<Unit filename="wxsmith/Cadframe.wxs" />
+		<Unit filename="zoom_accelerator.cpp" />
+		<Unit filename="zoom_accelerator.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<wxsmith version="1">
+				<gui name="wxWidgets" src="CadApp.cpp" main="CadFrame" init_handlers="necessary" language="CPP" />
+				<resources>
+					<wxFrame wxs="wxsmith/Cadframe.wxs" src="CadMain.cpp" hdr="CadMain.h" fwddecl="0" i18n="1" name="CadFrame" language="CPP" />
+				</resources>
+			</wxsmith>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

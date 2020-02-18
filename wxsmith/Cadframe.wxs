@@ -1,0 +1,716 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<wxsmith>
+	<object class="wxFrame" name="CadFrame">
+		<title>CADCAM -- Powered by Linux 2020 --</title>
+		<centered>1</centered>
+		<icon>/home/user/Cad/icons/cadcam.png</icon>
+		<size>1000,900</size>
+		<id_arg>0</id_arg>
+		<object class="wxAuiManager" variable="AuiManager1" member="yes">
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_PANEL1" subclass="opengl" variable="Panel1" member="yes">
+					<pos>406,523</pos>
+					<minsize>200,200</minsize>
+				</object>
+				<name>PaneName</name>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<closebutton>0</closebutton>
+				<dockdirection>Center</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_PANEL3" variable="Panel3" member="yes">
+					<pos>17,44</pos>
+					<minsize>64,0</minsize>
+					<object class="wxBoxSizer" variable="BoxSizer2" member="no">
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer5" member="no">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_POINT" variable="BitmapButton_point" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/point.png</bitmap>
+										<tooltip>point</tooltip>
+										<handler function="OnBitmapButton_pointClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_LINE" variable="BitmapButton_line" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/line.png</bitmap>
+										<tooltip>line</tooltip>
+										<handler function="OnBitmapButton_lineClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_LINESTRIP" variable="BitmapButton_linestrip" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/linestrip.png</bitmap>
+										<tooltip>linestrip</tooltip>
+										<handler function="OnBitmapButton_linestripClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_RECTANGLE" variable="BitmapButton1_rectangle" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/rectangle.png</bitmap>
+										<tooltip>rectangle</tooltip>
+										<handler function="OnBitmapButton1_rectangleClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ARC" variable="BitmapButton_arc" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/arc.png</bitmap>
+										<tooltip>arc</tooltip>
+										<handler function="OnBitmapButton_arcClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CIRCLE" variable="BitmapButton_circle" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/circle.png</bitmap>
+										<tooltip>circle</tooltip>
+										<handler function="OnBitmapButton_circleClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CIRCLE_3P" variable="BitmapButton_circle_3p" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/circle_3p.png</bitmap>
+										<tooltip>circle__3p</tooltip>
+										<handler function="OnBitmapButton_circle_3pClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_POLYGON" variable="BitmapButton_polygon" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/polygon.png</bitmap>
+										<tooltip>polygon</tooltip>
+										<handler function="OnBitmapButton_polygonClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ELLIPSE" variable="BitmapButton_ellipse" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/ellipse.png</bitmap>
+										<tooltip>ellipse</tooltip>
+										<handler function="OnBitmapButton_ellipseClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CUBIC_BEZIER_CURVE" variable="BitmapButton_cubic_bezier_curve" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/cubicbezcurve.png</bitmap>
+										<tooltip>cubic__bezier__curve</tooltip>
+										<handler function="OnBitmapButton_cubic_bezier_curveClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_SPLINE" variable="BitmapButton_spline" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/spline.png</bitmap>
+										<tooltip>spline</tooltip>
+										<handler function="OnBitmapButton_splineClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ENDPOINT" variable="BitmapButton_endpoint" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/endpoint.png</bitmap>
+										<tooltip>snap__endpoint</tooltip>
+										<handler function="OnBitmapButton_endpointClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_MIDPOINT" variable="BitmapButton_midpoint" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/midpoint.png</bitmap>
+										<tooltip>snap__midpoint</tooltip>
+										<handler function="OnBitmapButton_midpointClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_PERPENDICULAR" variable="BitmapButton_perpendicular" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/perpendicular.png</bitmap>
+										<tooltip>snap__perpendicular</tooltip>
+										<handler function="OnBitmapButton_perpendicularClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_INTERSECTION" variable="BitmapButton_intersection" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/intersection.png</bitmap>
+										<tooltip>snap__intersection</tooltip>
+										<handler function="OnBitmapButton_intersectionClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_NEAREST" variable="BitmapButton_nearest" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/nearest.png</bitmap>
+										<tooltip>snap__nearest</tooltip>
+										<handler function="OnBitmapButton_nearestClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CIRCLECENTER" variable="BitmapButton_circlecenter" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/circlecenter.png</bitmap>
+										<tooltip>snap__circlecenter</tooltip>
+										<handler function="OnBitmapButton_circlecenterClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_TANGENT" variable="BitmapButton_tangent" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/tangent.png</bitmap>
+										<tooltip>snap__circle__tangent</tooltip>
+										<handler function="OnBitmapButton_tangentClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CIRCLE_4P" variable="BitmapButton_circle_4p" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/circle_4p.png</bitmap>
+										<tooltip>snap__circle__4p</tooltip>
+										<handler function="OnBitmapButton_circle_4pClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_GRID" variable="BitmapButton_grid" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/grid.png</bitmap>
+										<tooltip>grid</tooltip>
+										<handler function="OnBitmapButton_gridClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ortho" variable="BitmapButton_ortho" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/ortho.png</bitmap>
+										<tooltip>ortho F8</tooltip>
+										<handler function="OnBitmapButton_orthoClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer6" member="no">
+								<orient>wxVERTICAL</orient>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_MOVE" variable="BitmapButton_move" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/move.png</bitmap>
+										<tooltip>move</tooltip>
+										<handler function="OnBitmapButton_moveClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_COPY" variable="BitmapButton_copy" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/copy.png</bitmap>
+										<tooltip>copy</tooltip>
+										<handler function="OnBitmapButton_copyClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_OFFSET" variable="BitmapButton_offset" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/offset.png</bitmap>
+										<tooltip>offset</tooltip>
+										<handler function="OnBitmapButton_offsetClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_STRETCH" variable="BitmapButton_stretch" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/stretch.png</bitmap>
+										<tooltip>stretch</tooltip>
+										<handler function="OnBitmapButton_stretchClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_MIRROR" variable="BitmapButton_mirror" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/mirror.png</bitmap>
+										<tooltip>mirror</tooltip>
+										<handler function="OnBitmapButton_mirrorClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ROTATE" variable="BitmapButton_rotate" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/rotate.png</bitmap>
+										<tooltip>rotate</tooltip>
+										<handler function="OnBitmapButton_rotateClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_SCALE" variable="BitmapButton_scale" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/scale.png</bitmap>
+										<tooltip>scale</tooltip>
+										<handler function="OnBitmapButton_scaleClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_EXTEND" variable="BitmapButton_extend" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/extend.png</bitmap>
+										<tooltip>extend</tooltip>
+										<handler function="OnBitmapButton_extendClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_TRIM" variable="BitmapButton_trim" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/trim.png</bitmap>
+										<tooltip>trim</tooltip>
+										<handler function="OnBitmapButton_trimClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_FILLED" variable="BitmapButton_filled" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/filled.png</bitmap>
+										<tooltip>fillet</tooltip>
+										<handler function="OnBitmapButton_filledClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CHAMFER" variable="BitmapButton_chamfer" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/chamfer.png</bitmap>
+										<tooltip>chamfer</tooltip>
+										<handler function="OnBitmapButton_chamferClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_MATCH_PROPERTIES" variable="BitmapButton_match_properties" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/match_properties.png</bitmap>
+										<tooltip>match__properties</tooltip>
+										<handler function="OnBitmapButton_match_propertiesClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_HORIZONTAL" variable="BitmapButton_dimension_horizontal" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/horizontal.png</bitmap>
+										<handler function="OnBitmapButton_dimension_horizontalClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_VERTICAL" variable="BitmapButton_dimension_vertical" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/vertical.png</bitmap>
+										<tooltip>dimension__vertical</tooltip>
+										<handler function="OnBitmapButton_dimension_verticalClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_NON_HORIZONTAL" variable="BitmapButton_dimension_non_horizontal" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/non_horizontal.png</bitmap>
+										<tooltip>dimension__lineair__angle</tooltip>
+										<handler function="OnBitmapButton_dimension_non_horizontalClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_DIAMETER" variable="BitmapButton_dimension_diameter" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/diameter.png</bitmap>
+										<tooltip>dimension__diameter</tooltip>
+										<handler function="OnBitmapButton_dimension_diameterClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_RADIUS" variable="BitmapButton_dimension_radius" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/radius.png</bitmap>
+										<tooltip>dimension__radius</tooltip>
+										<handler function="OnBitmapButton_dimension_radiusClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_ANGLE_2P" variable="BitmapButton_dimension_angle_2p" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/angle_2p.png</bitmap>
+										<tooltip>dimension__angle__2p</tooltip>
+										<handler function="OnBitmapButton_dimension_angle_2pClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_ANGLE_3P" variable="BitmapButton_dimension_angle_3p" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/angle_3p.png</bitmap>
+										<tooltip>dimension__angle__3p</tooltip>
+										<handler function="OnBitmapButton_dimension_angle_3pClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DIMENSION_EDIT" variable="BitmapButton_dimension_edit" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/dimension_edit.png</bitmap>
+										<tooltip>dimension__edit</tooltip>
+										<handler function="OnBitmapButton_dimension_editClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+						</object>
+					</object>
+				</object>
+				<name>PaneName3</name>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<closebutton>0</closebutton>
+				<dockdirection>Left</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_PANEL2" variable="Panel2" member="yes">
+					<pos>0,0</pos>
+					<minsize>0,64</minsize>
+					<object class="wxBoxSizer" variable="BoxSizer7" member="no">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer8" member="no">
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_FILE_NEW" variable="BitmapButton_file_new" member="yes">
+										<bitmap stock_id="wxART_NEW" />
+										<tooltip>file__new</tooltip>
+										<handler function="OnBitmapButton_file_newClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_FILE_OPEN" variable="BitmapButton_file_open" member="yes">
+										<bitmap stock_id="wxART_FILE_OPEN" />
+										<tooltip>file__open</tooltip>
+										<handler function="OnBitmapButton_file_openClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_FILE_SAVE_AS" variable="BitmapButton_file_save_as" member="yes">
+										<bitmap stock_id="wxART_FILE_SAVE_AS" />
+										<tooltip>file__save__as</tooltip>
+										<handler function="OnBitmapButton_file_save_asClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_PRINT" variable="BitmapButton_print" member="yes">
+										<bitmap stock_id="wxART_PRINT" />
+										<tooltip>print</tooltip>
+										<handler function="OnBitmapButton_printClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_3D" variable="BitmapButton_view_3d" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/3d.png</bitmap>
+										<tooltip>view__3d</tooltip>
+										<handler function="OnBitmapButton_view_3dClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_TOP" variable="BitmapButton_view_top" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/top.png</bitmap>
+										<tooltip>view__top</tooltip>
+										<handler function="OnBitmapButton_view_topClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_BOTTOM" variable="BitmapButton_view_bottom" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/bottom.png</bitmap>
+										<tooltip>view__bottom</tooltip>
+										<handler function="OnBitmapButton_view_bottomClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_LEFT" variable="BitmapButton_view_left" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/left.png</bitmap>
+										<tooltip>view__left</tooltip>
+										<handler function="OnBitmapButton_view_leftClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_RIGHT" variable="BitmapButton_view_right" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/right.png</bitmap>
+										<tooltip>view__right</tooltip>
+										<handler function="OnBitmapButton_view_rightClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_FRONT" variable="BitmapButton_view_front" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/front.png</bitmap>
+										<tooltip>view__front</tooltip>
+										<handler function="OnBitmapButton_view_frontClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_BACK" variable="BitmapButton_view_back" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/back.png</bitmap>
+										<tooltip>view__back</tooltip>
+										<handler function="OnBitmapButton_view_backClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_VIEW_EXTEND" variable="BitmapButton_view_extend" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/zoom_extend.png</bitmap>
+										<tooltip>zoom__extend</tooltip>
+										<handler function="OnBitmapButton_view_extendClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ZOOM_WINDOW" variable="BitmapButton_zoom_window" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/zoom_window.png</bitmap>
+										<tooltip>zoom__window</tooltip>
+										<handler function="OnBitmapButton_zoom_windowClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ZOOM_PLUS" variable="BitmapButton_zoom_plus" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/zoom_plus.png</bitmap>
+										<tooltip>zoom__plus</tooltip>
+										<handler function="OnBitmapButton_zoom_plusClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_ZOOM_MIN" variable="BitmapButton_zoom_min" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/zoom_min.png</bitmap>
+										<tooltip>zoom__min</tooltip>
+										<handler function="OnBitmapButton_zoom_minClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DELETE" variable="BitmapButton_delete" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/delete.png</bitmap>
+										<tooltip>delete</tooltip>
+										<handler function="OnBitmapButton_deleteClick" entry="EVT_BUTTON" />
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer9" member="no">
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON4" variable="BitmapButton4" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/layer.png</bitmap>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<minsize>0,0</minsize>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_CHOICE2" variable="Choice2" member="yes">
+										<content>
+											<item>layer dimension</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON5" variable="BitmapButton5" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/linetype.png</bitmap>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_CHOICE1" variable="Choice1" member="yes">
+										<content>
+											<item>solid</item>
+											<item>stipple</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON6" variable="BitmapButton6" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/linewidth.png</bitmap>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxChoice" name="ID_CHOICE3" variable="Choice3" member="yes">
+										<content>
+											<item>0mm</item>
+											<item>1mm</item>
+											<item>2mm</item>
+										</content>
+										<selection>0</selection>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON60" variable="BitmapButton60" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/text.png</bitmap>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+								<object class="sizeritem">
+									<object class="wxBitmapButton" name="ID_BITMAPBUTTON61" variable="BitmapButton61" member="yes">
+										<bitmap>/home/user/Cad_menu_test/icons/text_edit.png</bitmap>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+						</object>
+					</object>
+				</object>
+				<name>PaneName6</name>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<closebutton>0</closebutton>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_PANEL4" variable="Panel4" member="yes">
+					<pos>36,782</pos>
+					<minsize>32,0</minsize>
+					<object class="wxBoxSizer" variable="BoxSizer10" member="no">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CAD" variable="BitmapButton_cad" member="yes">
+								<bitmap>/home/user/Cad_menu_test/icons/cad.png</bitmap>
+								<handler function="OnBitmapButton_cadClick" entry="EVT_BUTTON" />
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBitmapButton" name="ID_BITMAPBUTTON_CAM" variable="BitmapButton_cam" member="yes">
+								<bitmap>/home/user/Cad_menu_test/icons/cam.png</bitmap>
+								<handler function="OnBitmapButton_camClick" entry="EVT_BUTTON" />
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBitmapButton" name="ID_BITMAPBUTTON_DEBUG" variable="BitmapButton_debug" member="yes">
+								<bitmap>/home/user/Cad/icons/debug.png</bitmap>
+								<handler function="OnBitmapButton_debugClick" entry="EVT_BUTTON" />
+							</object>
+							<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+						</object>
+					</object>
+				</object>
+				<name>PaneName12</name>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<dockdirection>Right</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+			<object class="AuiManagerItem">
+				<object class="wxPanel" name="ID_PANEL5" variable="Panel5" member="yes">
+					<pos>36,989</pos>
+					<minsize>0,100</minsize>
+					<object class="wxBoxSizer" variable="BoxSizer1" member="no">
+						<orient>wxVERTICAL</orient>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer3" member="no">
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_TEXTCTRL_message" variable="TextCtrl_message" member="yes">
+										<value>&gt;&gt; message</value>
+									</object>
+									<flag>wxALL|wxEXPAND</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+							<option>1</option>
+						</object>
+						<object class="sizeritem">
+							<object class="wxBoxSizer" variable="BoxSizer4" member="no">
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_TEXTCTRL_USER_INPUT" variable="TextCtrl_user_input" member="yes">
+										<value>&gt;&gt; user input</value>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+									<option>1</option>
+								</object>
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_TEXTCTRL_MOUSE_POS_X" variable="TextCtrl_mouse_pos_x" member="yes">
+										<value>0.000</value>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+								<object class="sizeritem">
+									<object class="wxTextCtrl" name="ID_TEXTCTRL_MOUSE_POS_Y" variable="TextCtrl_mouse_pos_y" member="yes">
+										<value>0.000</value>
+									</object>
+									<flag>wxALL|wxALIGN_CENTER_HORIZONTAL|wxALIGN_CENTER_VERTICAL</flag>
+									<border>5</border>
+								</object>
+							</object>
+							<flag>wxALL|wxEXPAND</flag>
+						</object>
+					</object>
+				</object>
+				<name>PaneName11</name>
+				<caption>Pane caption</caption>
+				<captionvisible>0</captionvisible>
+				<minimizebutton>0</minimizebutton>
+				<maximizebutton>0</maximizebutton>
+				<pinbutton>0</pinbutton>
+				<dockdirection>Bottom</dockdirection>
+				<dockfixed>0</dockfixed>
+				<dockabledirection></dockabledirection>
+				<destroyonclose>0</destroyonclose>
+				<firstadd>0</firstadd>
+			</object>
+		</object>
+	</object>
+</wxsmith>
