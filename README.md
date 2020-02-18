@@ -2,7 +2,6 @@
 cadcam program 
 
 created in CodeBlocks C++, free of charge
-QT costs : 5000+ dollar a year
 
 Only the dxf preview code is integrated so far.
 
